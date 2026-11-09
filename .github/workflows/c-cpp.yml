@@ -1,3 +1,8 @@
+# Optimized by ci-cost (https://github.com/mariotavarez/ci-cost)
+# Applied 1 optimization:
+# - [MEDIUM] Add concurrency group to "c-cpp.yml"
+# Estimated savings: ~2 min/run
+#
 name: C/C++ CI
 
 on:
@@ -7,6 +12,10 @@ on:
   pull_request:
     branches: [ master,develop ]
 
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   linux-x86:
     runs-on: ubuntu-latest
