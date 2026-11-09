@@ -13,6 +13,13 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
+    - name: Cache APT packages
+      uses: actions/cache@v4
+      with:
+        path: /var/cache/apt/archives
+        key: ${{ runner.os }}-apt
+        restore-keys: |
+          ${{ runner.os }}-apt-
     - name: Install dependencies
       run: |
         sudo apt-get update
@@ -29,6 +36,13 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
+    - name: Cache APT packages
+      uses: actions/cache@v4
+      with:
+        path: /var/cache/apt/archives
+        key: ${{ runner.os }}-apt
+        restore-keys: |
+          ${{ runner.os }}-apt-
     - name: Install dependencies
       run: |
         sudo apt-get update
@@ -48,6 +62,13 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
+    - name: Cache APT packages
+      uses: actions/cache@v4
+      with:
+        path: /var/cache/apt/archives
+        key: ${{ runner.os }}-apt
+        restore-keys: |
+          ${{ runner.os }}-apt-
     - name: Install dependencies
       run: |
         sudo apt-get update
@@ -66,6 +87,13 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
+    - name: Cache APT packages
+      uses: actions/cache@v4
+      with:
+        path: /var/cache/apt/archives
+        key: ${{ runner.os }}-apt
+        restore-keys: |
+          ${{ runner.os }}-apt-
     - name: Install dependencies
       run: |
         sudo apt-get update
@@ -88,6 +116,13 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
+    - name: Cache APT packages
+      uses: actions/cache@v4
+      with:
+        path: /var/cache/apt/archives
+        key: ${{ runner.os }}-apt
+        restore-keys: |
+          ${{ runner.os }}-apt-
     - name: Install dependencies
       run: |
         sudo apt-get update
